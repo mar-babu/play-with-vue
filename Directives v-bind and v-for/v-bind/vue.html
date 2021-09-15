@@ -39,6 +39,12 @@
 		<p>{{ message }}</p>
 		<input v-model="message">
 	</div>
+    
+    <div id="app-7">
+        <img src="images/vue-logo.png" alt="">
+        <img v-bind:src= 'url' v-bind:title= 'title'/>
+
+    </div>
 
 	<script type="text/javascript">
 		var app = new Vue({
@@ -93,6 +99,15 @@
 				message: 'Hello Vue. Abdur Rahman!'
 			}
 		})
+
+        var model = {
+            url: 'images/vue-logo.png',
+            title: 'Vue Logo'
+        }
+        var app7 = new Vue({
+            el: '#app-7',
+            data: model
+        })
 	</script>
 </body>
 </html>
